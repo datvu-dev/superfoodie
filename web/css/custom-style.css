@@ -1,0 +1,96 @@
+/*
+ * Super Foodie Ltf
+ * Stylesheet created by Dat Vu
+ */
+
+/* ==== GENERAL ==== */
+body#body-index {
+	background: #fff url('../images/bg-index.jpg') 0 0/100% 100%;
+}
+body#body-why {
+	background: #fff url('../images/bg-why.jpg') 0 0/100% 100%;
+}
+#l
+#loader {
+	background:#fff;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    font-size: 30px;
+    text-align: center;
+    position: fixed;
+    z-index: 1000; 
+}
+.transparent-background {
+	width: 100%;
+	height: 100%;
+	background: #000;
+	opacity: 0.4;
+	position:absolute;
+	top: 0;
+	z-index: -1;
+}
+
+/* ==== NAVIGATION ==== */
+nav {
+	/*background-color: #000 !important;
+	opacity: 0.5;*/
+	height: 90px;
+	position:fixed !important;
+	width: 100% !important;
+	border-radius: 0 !important;	
+	top: 40%;
+}
+nav .container {
+	margin-top: 20px;
+}
+nav .in {
+	background-color: #000;
+	opacity: 0.5;
+	margin-top: 17px;
+}
+nav a {
+	color: #fff !important;
+	font-size: 16px;
+}
+
+
+/* ==== MAIN CONTENT ==== */
+.body-content {
+	position: relative;
+}
+.body-content .top-panel {
+	color: #fff;
+	width: 400px;	
+	height:0;
+	position: absolute;
+	right: 0;	
+}
+.body-content .top-panel p {
+	padding: 20px 20px 0 20px;
+	display: none;
+}
+
+/* ==== FOOTER ==== */
+.footer {
+    height: 100px;
+    color: #fff;
+    position:fixed;
+    bottom: 0;
+    width: 100%;    
+    background-color: #000;   
+    padding-top: 10px;
+}
+.footer .footer-text {
+	font-size: 11.5px;
+	letter-spacing: 0.5px;
+	clear:both;
+}
+.footer .button {
+	background-color: #000;
+	opacity: 0.8;
+	border: 1px solid #fff;
+	font-size: 12px;
+	padding: 4px 10px;
+	margin-top: 4px;
+}
