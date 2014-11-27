@@ -4,6 +4,16 @@
  */
 
  $(window).load(function() {
+ 	if ($('body').attr("id") == "why") { 		
+		$('.body-background').removeClass("body-landing").attr("id","body-why");					
+	}
+	else if ($('body').attr("id") == "where") {	
+		$('.body-background').removeClass("body-landing").attr("id","body-where");			
+	}
+	else if ($('body').attr("id") == "eat") { 			
+		$('.body-background').removeClass("body-landing").attr("id","body-eat");			
+	}
+
  	/* Make the page gradually appear */
  	$("#loader").fadeOut(2000);
  });
@@ -26,25 +36,7 @@
  				$(this).removeClass("body-landing").attr("id","body-home");
  				$(this).animate({opacity:1}, 1000);
  			}); 			
- 		}
- 		else if ($('body').attr("id") == "why") { 			
- 			$('.body-background').animate({opacity:0},1000, function() {
- 				$(this).removeClass("body-landing").attr("id","body-why");
- 				$(this).animate({opacity:1}, 1000);
- 			}); 			
- 		}
- 		else if ($('body').attr("id") == "where") { 			
- 			$('.body-background').animate({opacity:0},1000, function() {
- 				$(this).removeClass("body-landing").attr("id","body-where");
- 				$(this).animate({opacity:1}, 1000);
- 			}); 			
- 		}
- 		else if ($('body').attr("id") == "eat") { 			
- 			$('.body-background').animate({opacity:0}, 1000, function() {
- 				$(this).removeClass("body-landing").attr("id","body-eat");
- 				$(this).animate({opacity:1}, 1000);
- 			}); 			
- 		}
+ 		}		
 		
  		/* Expand the content panel */
  		$(".top-panel").show().animate({height: 1000}, 1500, function() {
@@ -52,6 +44,8 @@
  			$(".top-panel *").fadeIn(1000);
  		});
  	});
+
+	
 
 	/* Load the contact form when Contact button is clicked */
 	$("#contact-button").click(function() {
@@ -70,5 +64,22 @@
 	});
 		
 
- 	
+ 	/* Load the product info in footer when clicked */
+ 	$('.carousel .slideItem').click(function() {
+ 		var item = $(this).attr("id");
+
+ 		$('.product-info').fadeOut(1500);
+ 		$('#footer-panel').animate({height: 300}, 1500, function() {
+ 			$('#panel-close').fadeIn(1500);
+ 			$("#" + item + "-info").fadeIn(1500);
+ 		});
+ 	});
+
+ 	/* Close the product info */
+ 	$('#panel-close').click(function() { 		
+ 		$('#footer-panel').animate({height: 0}, 1500, function() {
+ 			$('#panel-close').fadeOut();
+ 			$('.product-info').fadeOut();
+ 		});
+ 	});
  });

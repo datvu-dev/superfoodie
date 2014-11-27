@@ -12,8 +12,8 @@ Version: 1.1
 
 .carousel
 {
-	position :relative ;
-	top:-25px;
+	position : absolute ;
+	bottom: 12px;
 	margin :0 auto;
 	/*width :1000px;*/
 	height :auto;

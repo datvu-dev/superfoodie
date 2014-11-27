@@ -125,66 +125,66 @@ AppAsset::register($this);
     <footer class="footer">
         <div class="container">
             <!-- CAROUSEL STARTS -->
-            <div class="pull-left carousel col-lg-5 col-xs-12"> 
+            <div class="pull-left carousel col-lg-4 col-xs-12"> 
                 <!-- SLIDE STARTS -->
-                <div class="slides col-lg-5 col-xs-12"> 
+                <div class="slides col-lg-4 col-xs-12"> 
                 
-                    <div> <!-- SLIDE ITEM -->
-                        <a href="#"> 
-                            <img src="images/slide/product-brown.png" />
+                    <div id="cappuccino"> <!-- SLIDE ITEM -->
+                        <a> 
+                            <img src="images/slide/product-cappuccino.png" />
                         </a>            
                     </div>
                     
-                    <div> <!-- SLIDE ITEM -->
-                        <a href="#"> 
-                            <img src="images/slide/product-blue.png" />
+                    <div id="blueberry"> <!-- SLIDE ITEM -->
+                        <a> 
+                            <img src="images/slide/product-blueberry.png" />
                         </a>            
                     </div>
                     
-                    <div> <!-- SLIDE ITEM -->
-                        <a href="#"> 
-                            <img src="images/slide/product-green.png" />
+                    <div id="coconut"> <!-- SLIDE ITEM -->
+                        <a> 
+                            <img src="images/slide/product-coconut.png" />
                         </a>            
                     </div>
                     
-                    <div> <!-- SLIDE ITEM -->
-                        <a href="#"> 
-                            <img src="images/slide/product-yellow.png" />
+                    <div id="banana"> <!-- SLIDE ITEM -->
+                        <a> 
+                            <img src="images/slide/product-banana.png" />
                         </a>            
                     </div>
                     
-                    <div> <!-- SLIDE ITEM -->
-                        <a href="#"> 
-                            <img src="images/slide/product-pink.png" />
+                    <div id="apple"> <!-- SLIDE ITEM -->
+                        <a> 
+                            <img src="images/slide/product-apple.png" />
                         </a>            
                     </div>  
-                    <div> <!-- SLIDE ITEM -->
-                        <a href="#"> 
-                            <img src="images/slide/product-brown.png" />
+                    <div id="cappuccino"> <!-- SLIDE ITEM -->
+                        <a> 
+                            <img src="images/slide/product-cappuccino.png" />
                         </a>            
                     </div>
                     
-                    <div> <!-- SLIDE ITEM -->
-                        <a href="#"> 
-                            <img src="images/slide/product-blue.png" />
+                    <div id="blueberry"> <!-- SLIDE ITEM -->
+                        <a> 
+                            <img src="images/slide/product-blueberry.png" />
                         </a>            
                     </div>
                     
-                    <div> <!-- SLIDE ITEM -->
-                        <a href="#"> 
-                            <img src="images/slide/product-green.png" />
+                    <div id="coconut"> <!-- SLIDE ITEM -->
+                        <a> 
+                            <img src="images/slide/product-coconut.png" />
                         </a>            
                     </div>
                     
-                    <div> <!-- SLIDE ITEM -->
-                        <a href="#"> 
-                            <img src="images/slide/product-yellow.png" />
+                    <div id="banana"> <!-- SLIDE ITEM -->
+                        <a> 
+                            <img src="images/slide/product-banana.png" />
                         </a>            
                     </div>
                     
-                    <div> <!-- SLIDE ITEM -->
-                        <a href="#"> 
-                            <img src="images/slide/product-pink.png" />
+                    <div id="apple"> <!-- SLIDE ITEM -->
+                        <a> 
+                            <img src="images/slide/product-apple.png" />
                         </a>            
                     </div>                    
              
@@ -197,6 +197,93 @@ AppAsset::register($this);
                 <a class="button" id="contact-button" href="javascript:void(0)">CONTACT</a>
             </p>
             <p class="footer-text">Introducing the Superfoodie range; deliciously cold pressed superfood slices that are hand-made in Byron Bay and inspired by ingredients all over the world.</p>
+        </div>
+        <div id="footer-panel">
+            
+            <div id="product-wrap">
+                <span id="panel-close">X</span>
+                <div class="product-info" id="cappuccino-info">
+                    <div class="product-pic">
+                        <img src="images/slide/product-cappuccino-big.png" />
+                    </div>
+                    <div class="product-detail">
+                        <p class="product-head">
+                            <span class="product-title">CAPPUCCINO CACAO</span><br>
+                            <span class="product-subtitle">ALL DAY FRUIT & NUT SLICE</span>
+                        </p>
+                        <p class="product-description">
+                            A smooth cappuccino taste with a treat 
+                            for the superfoodie – Cacao nibs. 
+                            This could be the ultimate pick me up.
+                            100% natural ingredients:<br><br>
+                            Date, Cashew, Almond, (Coconut Cream, Coconut Oil, Coffee, Cinnamon, Natural Vanilla Extract, Natural Cappuccino Extract) (10%), Cacao Nibs, Cacao (4%), Brown Rice Puff.
+                        </p>
+                    </div>
+                </div>
+                <div class="product-info" id="coconut-info">
+                    <div class="product-pic">
+                        <img src="images/slide/product-coconut-big.png" />
+                    </div>
+                    <div class="product-detail">
+                        <p class="product-head">
+                            <span class="product-title">COCONUT LIME</span><br>
+                            <span class="product-subtitle">ALL DAY FRUIT & NUT SLICE</span>
+                        </p>
+                        <p class="product-description">
+                            A smooth cappuccino taste with a treat 
+                            for the superfoodie – Cacao nibs. 
+                            This could be the ultimate pick me up.
+                            100% natural ingredients:<br><br>
+                            Date, Cashew, Almond (12%), Brown Rice Puff, Coconut Cream, Coconut Oil, Lemon, Natural Lime Extract (2%).
+                        </p>
+                    </div>
+                </div>
+                <div class="product-info" id="banana-info">
+                    <div class="product-pic">
+                        <img src="images/slide/product-banana-big.png" />
+                    </div>
+                    <div class="product-detail">
+                        <p class="product-head">
+                            <span class="product-title">BANANA COCONUT WALNUT CHIA</span><br>
+                            <span class="product-subtitle">BREAKFAST FRUIT & NUT SLICE</span>
+                        </p>
+                        <p class="product-description">
+                            Wake up and smell the banana and coconut - with all the goodness of walnut and chia. A good morning is almost guaranteed. 100% natural ingredients:<br><br>
+                            Date, Banana (14%), Walnut (8%), Cashew, Coconut (5%), Brown Rice Puff, Coconut Cream, Coconut Oil, Natural Vanilla Extract, Chia (2%), Lemon.
+                        </p>
+                    </div>
+                </div>
+                <div class="product-info" id="blueberry-info">
+                    <div class="product-pic">
+                        <img src="images/slide/product-blueberry-big.png" />
+                    </div>
+                    <div class="product-detail">
+                        <p class="product-head">
+                            <span class="product-title">BLUEBERRY LEMON</span><br>
+                            <span class="product-subtitle">ALL DAY FRUIT & NUT SLICE</span>
+                        </p>
+                        <p class="product-description">
+                            Need some extra goodness in your system? This is a great tasting antioxidant infusion! 100% natural ingredients:<br><br>
+                            Date, Blueberry (6%), Almond, Cashew, Brown Rice Puff, Lemon (2%), Coconut Cream.
+                        </p>
+                    </div>
+                </div>
+                <div class="product-info" id="apple-info">
+                    <div class="product-pic">
+                        <img src="images/slide/product-apple-big.png" />
+                    </div>
+                    <div class="product-detail">
+                        <p class="product-head">
+                            <span class="product-title">APPLE RASPBERRY</span><br>
+                            <span class="product-subtitle">BREAKFAST FRUIT & NUT SLICE</span>
+                        </p>
+                        <p class="product-description">
+                            The freshness of apple and raspberry with a hint of cinnamon provides a classic breakfast combination to get you going. Have a good one! 100% natural ingredients:<br><br>
+                            Date, Almond, Cashew, Apple (7%), Raspberry (5%), Brown Rice Puff, Cinnamon, Natural Apple Extract.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
     <!-- FOOTER ENDS -->
