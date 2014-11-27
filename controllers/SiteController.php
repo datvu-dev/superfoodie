@@ -89,8 +89,24 @@ class SiteController extends Controller
         }
     }
 
+    public function actionCreatewidget() {
+        return $this->render('contactformwidget');
+    }
+
     public function actionWhy()
     {
         return $this->render('why');
+    }
+    public function actionWhere()
+    {
+        return $this->render('where');
+    }
+    public function actionWhat()
+    {
+        return $this->render('what');
+    }
+    public function actionEat()
+    {
+        return $this->render('eat');
     }
 }

@@ -1,16 +1,11 @@
 <?php
+namespace app\components;
 
-namespace app\models;
+use yii\base\Widget;
+use yii\helpers\Html;
 
-use Yii;
-use yii\base\Model;
-
-/**
- * ContactForm is the model behind the contact form.
- */
-class ContactForm extends Model
-{
-    public $name;
+class ContactFormWidget extends Widget {
+	public $name;
     public $email;    
     public $enquiry;    
 
@@ -47,3 +42,4 @@ class ContactForm extends Model
         }
     }
 }
+?>

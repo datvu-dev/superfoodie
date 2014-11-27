@@ -20,8 +20,12 @@ class AppAsset extends AssetBundle
     public $css = [
         'css/site.css',
         'css/custom-style.css',
+        'css/carousel.css',
     ];
-    public $js = [
+    public $js = [        
+        'js/jquery-1.4.4.min.js',
+        'js/jquery.mousewheel.min.js',       
+        'js/jquery.carousel-1.1.js',        
         'js/custom-script.js',
     ];
     public $depends = [
