@@ -12,8 +12,7 @@ Version: 1.1
 
 .carousel
 {
-	position : absolute ;
-	bottom: 12px;
+	display:none;
 	margin :0 auto;
 	/*width :1000px;*/
 	height :auto;
@@ -73,10 +72,8 @@ Version: 1.1
 
 .carousel .nextButton
 {
-	position :absolute ;
-	right :23px;
-	top :5px;
-	width :35px;
+	position :absolute ;		
+	width :10px;
 	font-size: 35px;
 	/*height :35px;*/
 	/*background : url("../images/slide/next_button.png") no-repeat center;*/
@@ -88,8 +85,7 @@ Version: 1.1
 {
 	position :absolute ;
 	left :1px;
-	top :5px;
-	width :35px;
+	width :10px;
 	font-size: 35px;
 	/*height: 35px;		*/
 	/*background : url("..images/slide/prev_button.png");*/

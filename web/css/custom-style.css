@@ -11,21 +11,37 @@ body .body-background {
 	z-index: -10;
 }
 body .body-landing {
-	background: #fff url('../images/bg-landing.jpg') 0 0/100% 100%;
+	background: #fff url('../images/bg-landing.jpg') 0 0/100% 100% no-repeat;
+}
+body .body-landing-2 {
+	background: #fff url('../images/bg-landing-2.jpg') 0 0/100% 100% no-repeat;
+}
+body .body-landing-3 {
+	background: #fff url('../images/bg-landing-3.jpg') 0 0/100% 100% no-repeat;
 }
 body #body-home {
-	background: #fff url('../images/bg-home.jpg') 0 36%/100% 120%;
+	background: #fff url('../images/bg-home.jpg') 0 0/100% 100% no-repeat;
 }
-body #body-why {
-	background: #fff url('../images/bg-why.jpg') 0 0/100% 100%;
+body.first-time nav {
+	position:fixed !important;
+	top: 40%;
 }
-body #body-where {
-	background: #fff url('../images/bg-where.jpg') 0 0/100% 100%;
+body.first-time nav ul.navbar-nav {
+	display: none;
 }
-body #body-what {
-	background: #fff url('../images/bg-what.jpg') 0 0/100% 100%;
+body.first-time .footer {
+	display: none;
 }
-body #body-eat {
+body#why .body-background {
+	background: #fff url('../images/bg-why.jpg') 0 0/100% 100% no-repeat;
+}
+body#where .body-background {
+	background: #fff url('../images/bg-where.jpg') 0 0/100% 100% no-repeat;
+}
+body#what .body-background {
+	background: #fff url('../images/bg-what.jpg') 0 0/100% 100% no-repeat;
+}
+body#eat .body-background {
 	background: #fff url('../images/bg-eat.jpg') 68% 79%/160% 160%;
 }
 
@@ -48,6 +64,7 @@ body #body-eat {
 	top: 0;
 	z-index: -1;
 }
+
 
 /* ==== FONT FAMILY ==== */
 @font-face {
@@ -96,12 +113,15 @@ body #body-eat {
 nav {
 	/*background-color: #000 !important;
 	opacity: 0.5;*/
-	height: 90px;
-	position:fixed !important;
+	/*height: 90px;*/	
+	/*position:fixed !important;*/
 	width: 100% !important;
-	border-radius: 0 !important;
+	border-radius: 0 !important;	
 	border: 0px !important;	
-	top: 40%;
+	margin-bottom: 0 !important;
+	padding-bottom: 25px;
+	background-color: transparent !important;
+	top: 0;
 }
 nav .container {
 	margin-top: 20px;
@@ -126,7 +146,15 @@ nav a {
 	font-family: 'gotham_book';
 	color: #fff !important;
 	font-size: 25px;
-	margin-left: 15px;
+	margin-left: 30px;
+}
+nav button.navbar-toggle {
+	background: transparent !important;
+	border: transparent !important;
+}
+nav .collapse {
+	margin-top: 15px;
+	border-color: #595959 !important;
 }
 
 
@@ -138,8 +166,8 @@ nav a {
 	color: #fff;
 	/*width: 400px;	*/
 	height:0;
-	position: fixed;
-	top: 89px;
+	position: relative;
+	/*top: 89px;*/
 	display: none;
 	padding:0;
 	float:right;
@@ -211,6 +239,9 @@ nav a {
 	margin-top: 20px;
 	border-radius: 0;
 }
+#contact-panel button[type="submit"]:focus {
+	text-decoration: none;
+}
 
 /* ==== FOOTER ==== */
 .footer {
@@ -219,26 +250,45 @@ nav a {
     width: 100%;    
     background-color: #000;   
     padding-top: 10px;
+    position:absolute;
+    z-index:2;
 }
 .footer .footer-text {
-	font-size: 12px;
+	font-size: 11px;
 	letter-spacing: 0.5px;	
 	margin-top: 60px
 }
 .footer .pull-right {
 	margin-top: 10px;
 	text-align: center;
+	z-index: 10;
 }
-.footer .button {
+#footer-icon-1 {
+	display:inline-block;
+	width: 33px;
+	height: 33px;
+	background: url('../images/footer-icon-1.png') no-repeat;
+	margin-left: 10px;
+}
+#footer-icon-2 {
+	display:inline-block;
+	width: 33px;
+	height: 33px;
+	background: url('../images/footer-icon-2.png') no-repeat;
+	margin-left: 10px;
+}
+.footer #contact-button {
 	background-color: #000;
 	color: #fff;
 	opacity: 0.8;
 	border: 1px solid #fff;
 	font-size: 12px;
 	padding: 4px 10px;
-	margin-top: 4px;
+	margin-left: 20px;
+	position: relative;
+	top: -12px;
 }
-.footer .button:hover {
+.footer #contact-button:hover, .footer #contact-button:focus {
 	text-decoration: none;
 }
 .footer #footer-panel {
@@ -290,8 +340,22 @@ nav a {
 
 /* ==== MEDIA QUERIES ==== */
 @media screen and (max-width: 480px) {
+	nav li a {
+		font-size: 20px;
+		margin-left: 50px;
+	}
 	.body-content .top-panel {
 		margin-right: -15px;
+	}
+	.footer .carousel {
+		position: relative;
+		bottom: 0;
+	}
+	.footer .carousel .prevButton, .footer .carousel .nextButton {
+		top : -5px;
+	}
+	.footer .carousel .nextButton {
+		right: 0;
 	}
 	.footer .pull-right {
 		margin-top: 0px;
@@ -305,6 +369,16 @@ nav a {
 	}
 	.footer {
 		height: 120px;
+	}
+	.footer .carousel {
+		position: absolute;
+		bottom: 70px;
+	}
+	.footer .carousel .prevButton, .footer .carousel .nextButton {
+		top: 5px;
+	}
+	.footer .carousel .nextButton {
+		right :15px;
 	}
 	.footer #footer-panel #product-wrap {
 		width: 1170px;

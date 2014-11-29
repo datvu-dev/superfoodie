@@ -1,6 +1,6 @@
 <?php
 /* @var $this yii\web\View */
-$this->title = 'Super Foodie';
+$this->title = 'Home';
 ?>
 <body id="home">
 <div class="site-home"> 

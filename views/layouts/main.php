@@ -20,11 +20,11 @@ AppAsset::register($this);
     <meta charset="<?= Yii::$app->charset ?>"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?= Html::csrfMetaTags() ?>
-    <title><?= Html::encode($this->title) ?></title>
+    <title>Superfoodie - <?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>   
 </head>
 <body >
-<div class="body-landing body-background"></div>
+<div class="body-background"></div>
 <?php $this->beginBody() ?>
     <!-- BODY STARTS -->
     <div class="wrap">
@@ -59,13 +59,13 @@ AppAsset::register($this);
                 <div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w0-collapse"><span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
-                <span class="icon-bar"></span></button><a class="navbar-brand" href="/superfoodie/web/index.php">SUPERFOODIE<sup>TM</sup></a></div>
+                <span class="icon-bar"></span></button><a class="navbar-brand" href="index.php">SUPERFOODIE<sup>TM</sup></a></div>
                 <div id="w0-collapse" class="collapse navbar-collapse">
                     <ul id="w1" class="navbar-nav navbar-right nav">
-                        <li><a href="/superfoodie/web/index.php?r=site%2Fwhy">WHY</a></li>
-                        <li><a href="/superfoodie/web/index.php?r=site%2Fwhere">WHERE</a></li>
-                        <li><a href="/superfoodie/web/index.php?r=site%2Fwhat">WHAT</a></li>
-                        <li><a href="/superfoodie/web/index.php?r=site%2Feat">EAT</a></li>
+                        <li><a href="index.php?r=site%2Fwhy">WHY</a></li>
+                        <li><a href="index.php?r=site%2Fwhere">WHERE</a></li>
+                        <li><a href="index.php?r=site%2Fwhat">WHAT</a></li>
+                        <li><a href="index.php?r=site%2Feat">EAT</a></li>
                     </ul>                   
                 </div>                
             </div>
@@ -73,7 +73,7 @@ AppAsset::register($this);
         </nav>
         <!-- NAVIGATION ENDS -->
 
-        <div id="loader"></div>
+        <!--<div id="loader"></div>-->
 
         <div class="container">
             <?= Breadcrumbs::widget([
@@ -125,7 +125,7 @@ AppAsset::register($this);
     <footer class="footer">
         <div class="container">
             <!-- CAROUSEL STARTS -->
-            <div class="pull-left carousel col-lg-4 col-xs-12"> 
+            <div class="pull-left carousel col-lg-4 col-md-4 col-sm-5 col-xs-12"> 
                 <!-- SLIDE STARTS -->
                 <div class="slides col-lg-4 col-xs-12"> 
                 
@@ -193,8 +193,10 @@ AppAsset::register($this);
                 <!-- SLIDE ENDS -->   
             </div> 
             <!-- CAROUSEL ENDS -->           
-            <p class="pull-right col-lg-2 col-xs-12">
-                <a class="button" id="contact-button" href="javascript:void(0)">CONTACT</a>
+            <p class="pull-right col-lg-3 col-xs-12">
+                <span id="footer-icon-1"></span>
+                <span id="footer-icon-2"></span>
+                <a id="contact-button" href="javascript:void(0)">CONTACT</a>
             </p>
             <p class="footer-text">Introducing the Superfoodie range; deliciously cold pressed superfood slices that are hand-made in Byron Bay and inspired by ingredients all over the world.</p>
         </div>
