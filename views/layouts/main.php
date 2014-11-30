@@ -73,7 +73,7 @@ AppAsset::register($this);
         </nav>
         <!-- NAVIGATION ENDS -->
 
-        <!--<div id="loader"></div>-->
+        <div id="loader"></div>
 
         <div class="container">
             <?= Breadcrumbs::widget([
@@ -93,26 +93,29 @@ AppAsset::register($this);
                     Lot 6 Dudgeons Lane Bangalow NSW 2479<br>
                     Ph. +61 (0)2 6687 2221<br>
                     E. chat@superfoodie.com.au
-                </p>
-                <form id="contact-form" action="/superfoodie/web/index.php?r=site%2Fcontact" method="post" role="form" style="display: block;">
+                </p>                
+                <form id="contact-form" action="index.php?r=site%2Fmailer" method="post" role="form" style="display: block;">
                     <input type="hidden" name="_csrf" value="am1kSkxsZjIAOwEcGxwkBTIVJiIpOlF4Bhs.Dj8GBFQuOSssfAQwSw==" style="display: inline-block;">                    
                     <div class="form-group field-contactform-name required">
                         <label class="control-label" for="contactform-name">Name</label>
-                        <input type="text" id="contactform-name" class="form-control" name="ContactForm[name]">
+                        <input type="text" id="contactform-name" class="form-control" name="name" required>
                         <p class="help-block help-block-error" style="display: block;"></p>
                     </div>                    
                     <div class="form-group field-contactform-email required">
                         <label class="control-label" for="contactform-email">Email</label>
-                        <input type="text" id="contactform-email" class="form-control" name="ContactForm[email]">
+                        <input type="email" id="contactform-email" class="form-control" name="email" required>
                         <p class="help-block help-block-error" style="display: block;"></p>
                     </div>                    
                     <div class="form-group field-contactform-enquiry required">
                         <label class="control-label" for="contactform-enquiry">Enquiry</label>
-                        <input type="text" id="contactform-enquiry" class="form-control" name="ContactForm[enquiry]">
+                        <input type="text" id="contactform-enquiry" class="form-control" name="enquiry" required>
                         <p class="help-block help-block-error" style="display: block;"></p>
                     </div>                   
                     <div class="form-group">
                         <button type="submit" class="btn btn-primary" name="contact-button">SEND</button>                    
+                    </div>
+                    <div class="form-group">
+                        <div id="form-messages"></div>
                     </div>
                 </form>  
                 <?php endif; ?>

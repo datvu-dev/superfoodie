@@ -22,7 +22,7 @@
 	}
 
  	/* Make the page gradually appear */
- 	//$("#loader").fadeOut(2000);
+ 	$("#loader").fadeOut(1000);
 
  	
  });
@@ -38,23 +38,24 @@ var screenDistance = null;
 	 	if (document.referrer == null || document.referrer.indexOf(window.location.hostname) < 0 ) { 	 			 			
 			$('.body-background').animate({opacity:0},1000,function() {
 				$(this).addClass("body-landing");
-				$(this).animate({opacity:1}, 2500, function() {
+				$(this).animate({opacity:1}, 1500, function() {
 					$(this).animate({opacity:0},1000, function() {
 						$(this).removeClass("body-landing").addClass("body-landing-2");
-						$(this).animate({opacity:1}, 2500, function() {
+						$(this).animate({opacity:1}, 1500, function() {
 							$(this).animate({opacity:0},1000, function() {
 								$(this).removeClass("body-landing-2").addClass("body-landing-3");
-								$(this).animate({opacity:1},2500, function() {
+								$(this).animate({opacity:1},1500, function() {
 									$(this).animate({opacity:0},1000,function() {
 										$(this).removeClass("body-landing-3").attr("id","body-home");
 										$(this).animate({opacity:1},1000);
-										$("nav").animate({top: 0}, 1000, function() {
+										$('nav .navbar-header').animate({left: 0}, 1000);
+										$("nav").animate({top: 0}, 1000, function() {											
 											$('body').removeClass('first-time');		
 									 		/* Display footer */
 									 		$(".footer").fadeIn(1000);
 
 									 		/* Expand the content panel */
-									 		$(".top-panel").show().animate({height: screenDistance}, 1500, function() {
+									 		$(".top-panel").show('slow').animate({height: screenDistance}, 1500, function() {
 									 			/* Slowly display panel content */
 									 			$(".top-panel *").fadeIn(1000);						 			
 									 		});
@@ -72,7 +73,7 @@ var screenDistance = null;
 			$('.body-background').attr("id","body-home");
 
 			/* Expand the content panel */
-	 		$(".top-panel").show().animate({height: screenDistance}, 1500, function() {
+	 		$(".top-panel").show().animate({height: screenDistance}, 1000, function() {
 	 			/* Slowly display panel content */
 	 			$(".top-panel *").fadeIn(1000);
 	 		});
@@ -80,7 +81,7 @@ var screenDistance = null;
 
 	} else {		
  		/* Expand the content panel */
- 		$(".top-panel").show().animate({height: screenDistance}, 1500, function() {
+ 		$(".top-panel").show().animate({height: screenDistance}, 1000, function() {
  			/* Slowly display panel content */
  			$(".top-panel *").fadeIn(1000);
  		});
@@ -132,9 +133,15 @@ var screenDistance = null;
  	/* Load the product info in footer when clicked */
  	$('.carousel .slideItem').click(function() {
  		var item = $(this).attr("id");
+ 		var panelHeight = null;
+ 		if ($(window).width() <= 480) {
+ 			panelHeight = 510;
+ 		} else {
+ 			panelHeight = 345;
+ 		} 
 
  		$('.product-info').fadeOut(1500);
- 		$('#footer-panel').animate({height: 345}, 1500, function() {
+ 		$('#footer-panel').animate({height: panelHeight}, 1500, function() {
  			$('#panel-close').fadeIn(1500);
  			$("#" + item + "-info").fadeIn(1500);
  		});

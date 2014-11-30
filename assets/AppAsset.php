@@ -28,6 +28,7 @@ class AppAsset extends AssetBundle
         'js/jquery.mousewheel.min.js',       
         'js/jquery.carousel-1.1.js',        
         'js/custom-script.js',
+        'js/form-validation.js',
     ];
     public $depends = [
         'yii\web\YiiAsset',

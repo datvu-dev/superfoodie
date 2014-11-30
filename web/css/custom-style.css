@@ -5,7 +5,7 @@
 
 /* ==== GENERAL ==== */
 body .body-background {
-	position: absolute;
+	position: fixed;
 	width: 100%;
 	height: 100%;
 	z-index: -10;
@@ -26,8 +26,14 @@ body.first-time nav {
 	position:fixed !important;
 	top: 40%;
 }
+body.first-time nav .navbar-header {
+	left: 45%;
+}
 body.first-time nav ul.navbar-nav {
 	display: none;
+}
+body.first-time .top-panel {
+	display: none !important;
 }
 body.first-time .footer {
 	display: none;
@@ -131,6 +137,9 @@ nav .in {
 	opacity: 0.5;
 	margin-top: 17px;
 }
+nav .navbar-header {
+	position: relative;
+}
 nav .navbar-brand {
 	font-family: 'thehand_bold';
 	font-size: 45px;
@@ -140,7 +149,7 @@ nav .navbar-brand {
 nav .navbar-brand sup {
 	font-size: 5px;
 	position: absolute;
-	top: 13px;
+	top: 10px;
 }
 nav a {
 	font-family: 'gotham_book';
@@ -151,10 +160,6 @@ nav a {
 nav button.navbar-toggle {
 	background: transparent !important;
 	border: transparent !important;
-}
-nav .collapse {
-	margin-top: 15px;
-	border-color: #595959 !important;
 }
 
 
@@ -209,7 +214,7 @@ nav .collapse {
 	text-transform: uppercase;
 	color: #fff !important;
 }
-#contact-panel input[type="text"], #contact-panel input[type="text"]:focus, #contact-panel textarea, #contact-panel textarea:focus {
+#contact-panel input[type="text"], #contact-panel input[type="email"], #contact-panel input[type="text"]:focus, #contact-panel input[type="text"]:focus {
 	color: #fff;
 	width: 60%;
 	display: inline-block;
@@ -241,6 +246,16 @@ nav .collapse {
 }
 #contact-panel button[type="submit"]:focus {
 	text-decoration: none;
+}
+#contact-panel #form-messages {
+	margin-top: 30px;
+	font-size: 16px;
+}
+#contact-panel .success {
+	color: #8BFF17;
+}
+#contact-panel .error {
+	color: #FFFC25;
 }
 
 /* ==== FOOTER ==== */
@@ -357,9 +372,39 @@ nav .collapse {
 	.footer .carousel .nextButton {
 		right: 0;
 	}
+	.footer #footer-panel .product-info .product-pic {
+		margin: 0px auto;
+		margin-top: 20px;
+		margin-bottom: 10px;
+		float: none;
+		width: 30%;
+	}
+	.footer #footer-panel .product-info .product-pic img {
+		width: 100px;
+	}
+	.footer #footer-panel .product-info .product-detail {
+		margin: 0px auto;
+		width: 70%;
+		float: none;
+	}
+	.footer #footer-panel .product-info .product-detail .product-title {
+		font-size: 30px;
+	}
+	.footer #footer-panel .product-info .product-detail .product-subtitle {
+		font-size: 10px;
+	}
+	.footer #footer-panel .product-info .product-detail .product-description {
+		font-size: 11px;
+	}
 	.footer .pull-right {
 		margin-top: 0px;
 		margin-bottom: 20px;
+	}
+}
+@media screen and (max-width: 768px) {
+	nav .collapse {
+		margin-top: 15px;
+		border-color: #595959 !important;
 	}
 }
 @media screen and (min-width: 1200px) {

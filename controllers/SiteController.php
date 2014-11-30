@@ -109,4 +109,8 @@ class SiteController extends Controller
     {
         return $this->render('eat');
     }
+    public function actionMailer()
+    {
+        return $this->render('mailer');
+    }
 }
